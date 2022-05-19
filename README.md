@@ -2,7 +2,9 @@
 
 A site where people can post hackathons and register hackathons
 
-
+## Prefered Stack
+- NextJS
+- TailwindCSS
 
 ## Users
 1. The hackers
