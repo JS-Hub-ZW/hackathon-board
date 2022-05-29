@@ -1,9 +1,12 @@
 import { Text, Stack } from "@chakra-ui/react";
+import Layout from "../components/general/layout"
 
 export default function Home() {
   return (
     <>
-      <Text>Hello world testing the chakra-ui</Text>
+      <Layout>
+        Hello World
+      </Layout>
     </>
   );
 }
