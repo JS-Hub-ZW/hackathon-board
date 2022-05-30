@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from "./navbar"
+import Navbar from "./navbr"
 
 export default function Layout({children}) {
   return (
     <div>
-        <NavBar/>
+        <Navbar/>
         {children}
     </div>
   )
