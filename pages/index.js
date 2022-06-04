@@ -4,9 +4,13 @@ import { Text,SimpleGrid, Stack } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-      <Text>
+      <Text
+       align="center"
+       fontSize="6xl"
+        mt={4}
+       >
         
-   Yes this project is coming soon
+   This Project is coming soon!
       </Text>
     </>
   );
