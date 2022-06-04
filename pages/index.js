@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Text
        align="center"
-       fontSize="6xl"
+       fontSize="4xl"
         mt={4}
        >
         
