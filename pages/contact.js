@@ -1,8 +1,26 @@
-import React from 'react'
-import Layout from '../components/general/layout'
+import { Text, 
+  Heading,
+  Link,
+  Stack,
+  Button,
+  } from '@chakra-ui/react'
+import Section from '../components/section'
 
-export default function ContactUs() {
-  return (
-    <Layout>Contact US here</Layout>
+
+const Contact = () => {
+  return(
+  <>
+    <Section delay={0.3}>
+      <Text
+       fontSize="6xl"
+       align="center"
+       >
+        📞 Create me please
+        </Text>      
+  </Section>
+ 
+  </>
   )
-}
+  }
+export default Contact
+
