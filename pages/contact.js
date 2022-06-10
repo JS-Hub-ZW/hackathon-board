@@ -15,7 +15,7 @@ const Contact = () => {
        fontSize="6xl"
        align="center"
        >
-        📞 Create me please
+        📞 Create me please!!
         </Text>      
   </Section>
  
