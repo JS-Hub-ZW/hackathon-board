@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import {
   Link,
   Stack,
@@ -8,22 +8,42 @@ import {
   Text,
   List,
   ListItem,
-  
-} from '@chakra-ui/react'
-import Section from "../components/section"
+} from "@chakra-ui/react";
+import Section from "../components/section";
+import EmailSubs from "../components/emailsubs";
 
 const About = () => {
-    return (
-        <>
-        <Section delay={0.2}>
-          <Text 
-            fontSize="6xl"
-            >
-            ☹️ They want to know about me please create me
-          </Text>
-        </Section>
-        </>
-    )
-}
+  return (
+    <>
+      <Section delay={0.2}>
+        <Text fontSize="xl" align="center" mt={50}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
+          magni doloremque maiores aspernatur architecto facilis omnis odio
+          deleniti? Adipisci deserunt minus nobis. Perferendis earum repellendus
+          minima, unde possimus veniam nisi!
+        </Text>
+        <EmailSubs />
 
-export default About
+        {/* Hackathons Cards will come here */}
+
+        {/*
+        !Todo 
+        MUSABATE CODE YANGU */}
+
+        <div className="flex text-blue-200 w-full justify-between items-center py-12">
+          <div className=" h-24 w-56 rounded flex items-center justify-center border border-black">
+            A
+          </div>
+          <div className=" h-24 w-56 rounded flex items-center justify-center border border-black">
+            A
+          </div>
+          <div className=" h-24 w-56 rounded flex items-center justify-center border border-black">
+            A
+          </div>
+        </div>
+      </Section>
+    </>
+  );
+};
+
+export default About;
