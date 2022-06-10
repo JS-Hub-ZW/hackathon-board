@@ -1,17 +1,16 @@
-import { Text,SimpleGrid, Stack } from "@chakra-ui/react";
+import { Text, SimpleGrid, Stack } from "@chakra-ui/react";
+import HomeHackathons from "../components/home/hackathons";
+import HomeHero from "../components/home/hero";
+import HomeCallToAction from "../components/home/homecta";
+
 
 
 export default function Home() {
   return (
     <>
-      <Text
-       align="center"
-       fontSize="4xl"
-        mt={4}
-       >
-        
-   This Project is coming soon!
-      </Text>
+      <HomeHero />
+      <HomeHackathons />
+      <HomeCallToAction/>
     </>
   );
 }
