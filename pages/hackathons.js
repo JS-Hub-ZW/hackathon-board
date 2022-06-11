@@ -1,8 +1,10 @@
 import React from 'react'
-import Layout from '../components/general/layout'
+import {Text} from "chakra-ui/react"
 
 export default function Hackathons() {
   return (
-    <Layout>Hackathons</Layout>
+    <>
+     <Text>Hello</Text>
+    </>
   )
 }
