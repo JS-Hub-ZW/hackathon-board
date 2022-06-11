@@ -1,33 +1,31 @@
-import Head from 'next/head'
-import NavBar from '../general/navbr'
+import Head from "next/head";
+import NavBar from "../general/navbr";
 
-import { Box, Container } from '@chakra-ui/react'
-import Footer from '../general/footer'
-
+import { Box, Container } from "@chakra-ui/react";
+import Footer from "../general/footer";
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={6}>
+    <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="JSZW" />
         <meta name="author" content="JSZW" />
         <meta name="author" content="JSZW" />
-      
+
         <title>Hackathon Board</title>
       </Head>
 
-      <NavBar path={router.asPath} />
+      <Box as="main" pb={6}>
+        <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
-      
-
-        {children}
-
+        <Container maxW="container.md" pt={14} minH="100vh">
+          {children}
+        </Container>
         <Footer />
-      </Container>
-    </Box>
-  )
-}
+      </Box>
+    </>
+  );
+};
 
-export default Main
+export default Main;
