@@ -2,11 +2,12 @@ import {
     Flex,
     Circle,
     Box,
-    Grid,
+    SimpleGrid,
     GridItem,
     Image,
     Badge,
     Button,
+    Grid,
     Tabs,
     TabList,
     Tab,
@@ -36,7 +37,9 @@ import {
     
 function OngoingHackathons() {
     return (
-        <Grid templateColumns='repeat(4, 1fr)' >
+        <SimpleGrid
+        columns={[1,3]}
+       >
         {
            [1,2,3,4].map((_, i) => {
                 return (<GridItem>
@@ -102,7 +105,7 @@ function OngoingHackathons() {
                 </GridItem>)
             })
         }
-      </Grid>
+      </SimpleGrid>
     )
 }
   
