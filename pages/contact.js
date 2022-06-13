@@ -15,7 +15,8 @@ const Contact = () => {
        fontSize="6xl"
        align="center"
        >
-        📞 Create me please!!
+        📞 Dont worry Richson Is working on this find 
+          something  to work on!!
         </Text>      
   </Section>
  
