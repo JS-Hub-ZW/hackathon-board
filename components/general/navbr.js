@@ -118,7 +118,7 @@ const Navbar = (props) => {
             style={{ gap: 4 }}
             pl={2}
           >
-            Source
+            Our Work
           </LinkItem>
           <LinkItem
             href={"auth/login"}
