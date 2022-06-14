@@ -91,7 +91,7 @@ const Contact = () => {
                 <Box
         role={'group'}
         p={6}
-        maxW={'290px'}
+        maxW={'500px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
