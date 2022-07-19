@@ -37,42 +37,42 @@ import {
                   position: 'absolute',
                   bottom: 1,
                   left: 0,
-                  bg: 'red.400',
+                  bg: 'green.500',
                   zIndex: -1,
                 }}>
                 Join once,
               </Text>
               <br />
-              <Text as={'span'} color={'red.400'}>
+              <Text as={'span'} color={'green.500'}>
                 hack everywhere!
               </Text>
             </Heading>
-            <Text color={'gray.500'}>
+            <Text color={'gray.500'}    align={'center'}>
               Snippy is a rich coding snippets app that lets you create your own
               code snippets, categorize them, and even sync them in the cloud so
               you can use them anywhere. All that is free!
             </Text>
             <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', sm: 'row' }}>
+               align={'center'} >
               <Button
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
-                colorScheme={'red'}
-                bg={'red.400'}
-                _hover={{ bg: 'red.500' }}>
+                colorScheme={'green'}
+                bg={'green.400'}
+             
+                _hover={{ bg: 'green.500' }}>
                 Start hacking
               </Button>
-              <Button
+              {/* <Button
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
                 leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
                 How It Works
-              </Button>
+              </Button> */}
             </Stack>
           </Stack>
           <Flex

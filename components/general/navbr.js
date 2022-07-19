@@ -42,14 +42,14 @@ const navItems = [
     linkName: "Home",
     linkHref: "/",
   },
-  {
-    linkName: "Leaderboard",
-    linkHref: "/leaderboard",
-  },
-  {
-    linkName: "About",
-    linkHref: "/about",
-  },
+  // {
+  //   linkName: "Leaderboard",
+  //   linkHref: "/leaderboard",
+  // },
+  // {
+  //   linkName: "About",
+  //   linkHref: "/about",
+  // },
   {
     linkName: "Contact",
     linkHref: "/contact",
@@ -109,7 +109,7 @@ const Navbar = (props) => {
           <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem> */}
-          <LinkItem
+          {/* <LinkItem
             target="_blank"
             href="https://github.com/JS-Hub-ZW/"
             path={path}
@@ -119,8 +119,8 @@ const Navbar = (props) => {
             pl={2}
           >
             Our Work
-          </LinkItem>
-          <LinkItem
+          </LinkItem> */}
+          {/* <LinkItem
             href={"auth/login"}
             rel="noopener noreferrer"
             target="_blank"
@@ -137,7 +137,7 @@ const Navbar = (props) => {
             <Button variant="outline" colorScheme="purple" size="sm">
               Sign Up
             </Button>
-          </LinkItem>
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
