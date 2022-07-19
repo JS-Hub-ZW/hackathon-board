@@ -72,16 +72,12 @@ const Contact = () => {
         </Box>
         <Stack pt={10} align={'center'}>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Talk To a member of our community
+            Say Hi
           </Heading>
-          <Stack direction={'row'} align={'center'}>
-            <Text fontSize={'sm'}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                  nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur  
+          <Stack direction={'row'}>
+            <Text fontSize={'sm'} align={'center'}>
+              Do you want to say hi? Or perhaps you want to share some memes? Please  come through, we are waiting for you.
+                   
              </Text>
               
             </Stack>
@@ -130,14 +126,14 @@ const Contact = () => {
         </Box>
         <Stack pt={10} align={'center'}>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Talk To a member of our community
+            Contribute 
           </Heading>
           <Stack direction={'row'} align={'center'}>
-            <Text fontSize={'sm'}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                  nisi ut aliquip ex ea commodo consequat. 
+            <Text fontSize={'sm'} align={'center'}>
+                   Hackathon Board is far from perfect and its free and open source. We could use some extra hands inorder to 
+                   improve it. 
+
+
               
              </Text>
               
@@ -152,8 +148,11 @@ const Contact = () => {
           Press Inquiry ?
         </Heading>
 
-          <Text 
-          align="center">Please Email jshubzw@gmail.com</Text>
+         <Text align="center">
+         <Link
+          to="mailto:jshubzw@gmail.com"
+          ><Text color="blackAlpha.800">Email us at jshubzw@gmail.com</Text></Link>
+         </Text>
 
           <Text 
             padding={8}></Text>
