@@ -11,7 +11,7 @@ import { Text,
   } from '@chakra-ui/react'
 
 
-import Section from '../components/section'
+import Section from '../src/components/section'
  
 const IMAGE = 'https://t4.ftcdn.net/jpg/03/52/27/51/240_F_352275189_nZYNVgytI13P58jgqxpQCGs7wTdeA3In.jpg';
 const Contact = () => {

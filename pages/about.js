@@ -9,8 +9,8 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import Section from "../components/section";
-import EmailSubs from "../components/emailsubs";
+import Section from "../src/components/section";
+import EmailSubs from "../src/components/emailsubs";
 
 const About = () => {
   return (
