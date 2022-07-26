@@ -1,6 +1,6 @@
 import {Text} from '@chakra-ui/react'
-import LeaderBoard from '../components/leaderboard'
-import Section from '../components/section'
+import LeaderBoard from '../src/components/leaderboard'
+import Section from '../src/components/section'
 
 const Leaderboard = () => {
     return (

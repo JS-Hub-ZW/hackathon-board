@@ -1,7 +1,7 @@
 import { Text, SimpleGrid, Stack } from "@chakra-ui/react";
-import HomeHackathons from "../components/home/hackathons";
-import HomeHero from "../components/home/hero";
-import HomeCallToAction from "../components/home/homecta";
+import HomeHackathons from "../src/components/home/hackathons";
+import HomeHero from "../src/components/home/hero";
+import HomeCallToAction from "../src/components/home/homecta";
 
 
 
