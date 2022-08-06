@@ -1,6 +1,5 @@
 const initialState = {
-    hackathons: [],
-    hackathons_raw: {}
+    hackathons: []
   }
 
 

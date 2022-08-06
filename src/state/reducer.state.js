@@ -4,8 +4,7 @@ const reducer = (state, action) => {
         case "ADD_HACKATHONS":
             return {
                 ...state,
-                hackathons: action.payload.docs,
-                hackathons_raw: action.payload
+                hackathons: action.payload
             }
         default:
             return state
