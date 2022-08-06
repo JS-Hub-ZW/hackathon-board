@@ -3,11 +3,12 @@ import { Heading } from "@chakra-ui/react";
 import { GridItem } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 import { Stack, Box, Image, Text } from "@chakra-ui/react";
+import { SerializeToJSX } from "../../src/components/general/SerializeToJSX";
 import { CashIcon } from "../../src/icons/cashIcon";
 import { EyeIcon } from "../../src/icons/eyeIcon";
 import { GlobeIcon } from "../../src/icons/globeIcon";
 import { UsersIcon } from "../../src/icons/users";
-
+import { titleCase } from "../../src/utils/general.utils";
 
 
 export default function Detail({hackathon}) {
@@ -18,7 +19,7 @@ export default function Detail({hackathon}) {
                     roundedBottom={"lg"}
                     height={{sm: "sm", "md": "md", "lg": "lg"}}
                     width={"full"}
-                    src="https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+                    src={hackathon.landscapeImage?.sizes.card.url}/>
             </HStack>
 
             <Stack direction={["column", "row"]} mt="12" spacing="6">
@@ -27,11 +28,11 @@ export default function Detail({hackathon}) {
                     <Heading>{hackathon.name}</Heading>
 
                     <Box mt={10}>
-                        <DescriptionItem heading="Description" text={hackathon.description} />
-                        <DescriptionItem heading="Requirements" text={hackathon.requirements} />
-                        <DescriptionItem heading="Rules" text={hackathon.rules} />
-                        <DescriptionItem heading="Selection Criteria" text={hackathon.selection_criteria}/>
-                        <DescriptionItem heading="Prizes" text={hackathon.prizes} />
+                        <DescriptionItem heading="Description" isRichText={true}>{hackathon.description}</DescriptionItem>
+                        <DescriptionItem heading="Requirements" isRichText={true}>{hackathon.requirements}</DescriptionItem>
+                        <DescriptionItem heading="Rules" isRichText={true}>{hackathon.rules}</DescriptionItem>
+                        <DescriptionItem heading="Selection Criteria" isRichText={true}>{hackathon.selection_criteria}</DescriptionItem>
+                        <DescriptionItem heading="Prizes" isRichText={true}>{hackathon.prizes}</DescriptionItem>
                     </Box>
 
                 </Box>
@@ -40,8 +41,8 @@ export default function Detail({hackathon}) {
                     <Box mb={'6'}>
                         <Heading fontSize={"1.5em"}>Details</Heading>
                         <HStack spacing="12" mt="3">
-                            <DetailItem icon={<GlobeIcon boxSize={6} />} text={hackathon.type}/>
-                            <DetailItem icon={<EyeIcon boxSize={6} />} text={hackathon.setting} />
+                            <DetailItem icon={<GlobeIcon boxSize={6} />} text={hackathon.type ? titleCase(hackathon.type) : ""}/>
+                            <DetailItem icon={<EyeIcon boxSize={6} />} text={hackathon.setting ? titleCase(hackathon.setting) : ""} />
                             <Divider color="gray.200" />
                         </HStack>
                         <Stack mt="3">
@@ -53,7 +54,7 @@ export default function Detail({hackathon}) {
                     <Heading fontSize={"1.5em"}>Sponsors</Heading>
                     <Wrap spacing="12px" p="3" >
                         {
-                            hackathon.sponsors.map((sponsor, index) => {
+                            hackathon.sponsors?.map((sponsor, index) => {
                                 return (
                                     <Image key={index} maxWidth={"74"} src={sponsor.imageURL} />
                                 )
@@ -78,11 +79,14 @@ function DetailItem({ icon, text }) {
     )
 }
 
-function DescriptionItem({ heading, text }) {
+function DescriptionItem({ heading, isRichText, children }) {
+
+    console.log("The Text: ", children)
     return (
         <Stack mt={"3"} mb={"6"}>
             <Heading fontSize={"1.5em"}>{heading}</Heading>
-            <Text>{text}</Text>
+    
+            {isRichText && children && children.length > 0 && typeof(children) == 'object' ? SerializeToJSX(children) : <Text></Text> }
         </Stack>
     )
 }
@@ -105,6 +109,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {id}}) {
+    console.log("The id is: ", id);
     const res = await fetch(`${process.env.BACKEND_ENDPOINT}/hackathons/${id}`)
     const hackathon = await res.json()
     return {
