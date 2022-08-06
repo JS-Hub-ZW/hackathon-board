@@ -52,12 +52,14 @@ export default function Detail({hackathon}) {
 
                     <Heading fontSize={"1.5em"}>Sponsors</Heading>
                     <Wrap spacing="12px" p="3" >
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
-                            <Image maxWidth={"74"} src={"https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"} />
+                        {
+                            hackathon.sponsors.map((sponsor, index) => {
+                                return (
+                                    <Image key={index} maxWidth={"74"} src={sponsor.imageURL} />
+                                )
+                            })
+                        }
+                 
                     </Wrap>
 
                 </Box>
