@@ -48,7 +48,7 @@ function HackathonCard({hackathons}) {
 
           console.log(hackathon)
           return (<GridItem key={i} >
-            <Link href={`/details/${hackathon.id}`} passHref>
+            <Link href={`/detail/${hackathon.id}`} passHref>
             <Flex p={3} w="full" alignItems="center" justifyContent="center">
               <Box
                 bg={useColorModeValue('white', 'gray.800')}
