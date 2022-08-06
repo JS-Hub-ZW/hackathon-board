@@ -12,7 +12,7 @@ export default function Home({hackathons}) {
   const {populateHackathons} = useHackathonContext();
 
   useEffect(() => {
-    if (hackathons && hackathons.docs){
+    if (hackathons.length > 0){
       populateHackathons(hackathons);
     }
   }, [hackathons]);
@@ -29,8 +29,23 @@ export default function Home({hackathons}) {
 
 export async function getStaticProps() {
   const options = {method: 'GET'};
-  let hackathons = await fetch('http://localhost:4000/api/hackathons', options)
-  hackathons = await hackathons.json()
+  const mainUrl = `${process.env.BACKEND_ENDPOINT}/hackathons?depth=2&`
+  let upcomingHackathons =  await fetch(`${mainUrl}where[timepoint][equals]=upcoming`, options)
+  let ongoingHackathons = await fetch(`${mainUrl}where[timepoint][equals]=ongoing`, options)
+  let pastHackathons = await fetch(`${mainUrl}where[timepoint][equals]=past`, options)
+
+  let upcomingHackathonsData = await upcomingHackathons.json()
+  let ongoingHackathonsData = await ongoingHackathons.json()
+  let pastHackathonsData = await pastHackathons.json()
+
+
+  let hackathons = [
+    ...upcomingHackathonsData.docs,
+    ...ongoingHackathonsData.docs,
+    ...pastHackathonsData.docs
+  ]
+
+  console.log("Hackathons Length: ", hackathons.length)
 
   return {
     props: {
