@@ -1,18 +1,29 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useReducer} from "react";
 import reducer from "./reducer.state";
 import initialState from "./state.state";
-const Context = createContext();
-
+const HackathonContext = createContext();
 
 
 export function HackathonProvider({ children }) {
 
   const [state, dispatch] = useReducer(reducer, initialState)
+
+  const populateHackathons = (hackathons) => {
+    dispatch({
+      type: "ADD_HACKATHONS",
+      payload: hackathons
+    })
+  }
+
   return (
-    <Context.Provider value={[state, dispatch]}>{children}</Context.Provider>
+    <HackathonContext.Provider value={{
+      state,
+      dispatch,
+      populateHackathons
+    }}>{children}</HackathonContext.Provider>
   );
 }
 
-export function useHackathonContext() {
-  return useContext(Context);
+export function useHackathonContext(){
+  return useContext(HackathonContext);
 }
