@@ -42,13 +42,13 @@ export default function Detail({hackathon}) {
                         <Heading fontSize={"1.5em"}>Details</Heading>
                         <HStack spacing="12" mt="3">
                             <DetailItem icon={<GlobeIcon boxSize={6} />} text={hackathon.type ? titleCase(hackathon.type) : ""}/>
-                            <DetailItem icon={<EyeIcon boxSize={6} />} text={hackathon.setting ? titleCase(hackathon.setting) : ""} />
-                            <Divider color="gray.200" />
+                            <DetailItem icon={<EyeIcon boxSize={6} />} text={hackathon.setting ? titleCase(hackathon.setting) : "Public"} />
+                   
                         </HStack>
-                        <Stack mt="3">
+                        <HStack spacing={"12"} mt="3">
                             <DetailItem icon={<CashIcon boxSize={6} />} text={hackathon.prices} />
                             <DetailItem icon={<UsersIcon boxSize={6} />} text={hackathon.participants} />
-                        </Stack>
+                        </HStack>
                     </Box>
 
                     <Heading fontSize={"1.5em"}>Sponsors</Heading>
