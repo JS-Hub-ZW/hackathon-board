@@ -26,3 +26,10 @@ export const getPublishedTime = (timeString) => {
 
     return `${month} ${day}, ${year}`;
 }
+
+export const processName = (name, limit=30) => {
+    if (name.length > 20) {
+        return name.substring(0, limit) + '...';
+    }
+    return name;
+}
