@@ -6,6 +6,7 @@ specifiers:
   '@emotion/react': '11'
   '@emotion/styled': '11'
   autoprefixer: ^10.4.7
+  dayjs: ^1.11.4
   eslint: 8.15.0
   eslint-config-next: 12.1.6
   framer-motion: '6'
@@ -21,6 +22,7 @@ dependencies:
   '@chakra-ui/react': 2.0.2_ufi2kiomiulpcfpngwac2igmne
   '@emotion/react': 11.9.0_react@18.1.0
   '@emotion/styled': 11.8.1_btguaf77hpuxici4esujjeifki
+  dayjs: 1.11.4
   framer-motion: 6.3.3_ef5jwxihqo6n7gxfmzogljlgcm
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
@@ -1644,6 +1646,10 @@ packages:
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: true
+
+  /dayjs/1.11.4:
+    resolution: {integrity: sha512-Zj/lPM5hOvQ1Bf7uAvewDaUcsJoI6JmNqmHhHl3nyumwe0XHwt8sWdOVAPACJzCebL8gQCi+K49w7iKWnGwX9g==}
+    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}

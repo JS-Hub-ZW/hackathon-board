@@ -1,9 +1,9 @@
-import Layout from "../components/layouts/main";
-import Fonts from "../components/general/fonts";
+import Layout from "../src/components/layouts/main";
+import Fonts from "../src/components/general/fonts";
 import { AnimatePresence } from "framer-motion";
-import Chakra from "../components/chakra";
+import Chakra from "../src/components/chakra";
 import "../styles/globals.css";
-import { HackathonProvider } from "../state/provider.state";
+import { HackathonProvider } from "../src/state/provider.state";
 
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
@@ -16,6 +16,7 @@ if (typeof window !== "undefined") {
 function Website({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
+      
       <Fonts />
       <Layout router={router}>
         <AnimatePresence
@@ -32,6 +33,7 @@ function Website({ Component, pageProps, router }) {
           </HackathonProvider>
         </AnimatePresence>
       </Layout>
+     
     </Chakra>
   );
 }

@@ -18,6 +18,8 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useHackathonContext } from '../../state/provider.state';
+import { getPublishedTime } from '../../utils/general.utils';
 
 
 const data = {
@@ -33,13 +35,14 @@ const data = {
 
 
 
-function HackathonCard() {
+
+function HackathonCard({hackathons}) {
   return (
     <SimpleGrid
       columns={[1, 3]}
     >
       {
-        [1, 2, 3, 4].map((_, i) => {
+        hackathons.map((hackathon, i) => {
           return (<GridItem key={i}>
             <Flex p={3} w="full" alignItems="center" justifyContent="center">
               <Box
@@ -63,9 +66,9 @@ function HackathonCard() {
                 <Stack px="3" py="2" mt="6">
 
                   <Heading fontSize="2xl" align="center">
-                    Hackathon Title Here. Come Hack Some Stuff
+                    {hackathon.name}
                   </Heading>
-                  <Text fontSize={['sm']} px="2">Today at 9:00 AM</Text>
+                  <Text fontSize={['sm']} px="2">{getPublishedTime(hackathon.createdAt)}</Text>
                 </Stack>
 
                 <Box px="3" pb="3">
@@ -99,14 +102,19 @@ function HackathonCard() {
 
 
 
-function HomeHackathons({hackathons}) {
+function HomeHackathons() {
+
+
+  const {state} = useHackathonContext()
+
+
   return (
     <>
       <Heading
         fontWeight={600}
         fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
         lineHeight={'110%'}>
-        Hackthons{' '}
+        Hackathons{' '}
       </Heading>
       <Tabs variant='soft-rounded' colorScheme='green' mt="10">
         <TabList>
@@ -116,13 +124,13 @@ function HomeHackathons({hackathons}) {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <HackathonCard />
+            <HackathonCard hackathons={state.hackathons} />
           </TabPanel>
           <TabPanel>
-            <HackathonCard />
+            <HackathonCard hackathons={state.hackathons}/>
           </TabPanel>
           <TabPanel>
-            <HackathonCard />
+            <HackathonCard hackathons={state.hackathons}/>
           </TabPanel>
         </TabPanels>
       </Tabs>
