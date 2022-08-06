@@ -5,7 +5,7 @@ const Context = createContext();
 
 
 
-export function ThemeProvider({ children }) {
+export function HackathonProvider({ children }) {
 
   const [state, dispatch] = useReducer(reducer, initialState)
   return (
@@ -13,6 +13,6 @@ export function ThemeProvider({ children }) {
   );
 }
 
-export function useThemeContext() {
+export function useHackathonContext() {
   return useContext(Context);
 }

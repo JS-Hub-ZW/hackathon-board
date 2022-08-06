@@ -27,11 +27,11 @@ export default function Detail() {
                     <Heading>Lets hack some poop guys. Lots of prices to be won</Heading>
 
                     <Box mt={10}>
-                    <DescriptionItem heading="Description" text="Lets hack some poop guys. Lots of prices to be won" />
-                    <DescriptionItem heading="Requirements" text="Lets hack some poop guys. Lots of prices to be won" />
-                    <DescriptionItem heading="Rules" text="Lets hack some poop guys. Lots of prices to be won" />
-                    <DescriptionItem heading="Selection Criteria" text="Lets hack some poop guys. Lots of prices to be won" />
-                    <DescriptionItem heading="Prizes" text="Lets hack some poop guys. Lots of prices to be won" />
+                        <DescriptionItem heading="Description" text="Lets hack some poop guys. Lots of prices to be won" />
+                        <DescriptionItem heading="Requirements" text="Lets hack some poop guys. Lots of prices to be won" />
+                        <DescriptionItem heading="Rules" text="Lets hack some poop guys. Lots of prices to be won" />
+                        <DescriptionItem heading="Selection Criteria" text="Lets hack some poop guys. Lots of prices to be won" />
+                        <DescriptionItem heading="Prizes" text="Lets hack some poop guys. Lots of prices to be won" />
                     </Box>
 
                 </Box>

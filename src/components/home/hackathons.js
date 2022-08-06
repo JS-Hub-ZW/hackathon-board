@@ -40,7 +40,7 @@ function HackathonCard() {
     >
       {
         [1, 2, 3, 4].map((_, i) => {
-          return (<GridItem>
+          return (<GridItem key={i}>
             <Flex p={3} w="full" alignItems="center" justifyContent="center">
               <Box
                 bg={useColorModeValue('white', 'gray.800')}
@@ -99,7 +99,7 @@ function HackathonCard() {
 
 
 
-function HomeHackathons() {
+function HomeHackathons({hackathons}) {
   return (
     <>
       <Heading
