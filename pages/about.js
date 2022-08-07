@@ -46,7 +46,9 @@ const CONTRIBUTERS = [
 ]
 
 const About = () => {
-    return ( <> <Section delay={0.2}>
+    return (
+      
+      <Section delay={0.2}>
         <Heading
         fontSize='6xl'
         align="center"
@@ -99,7 +101,7 @@ const About = () => {
 
             </SimpleGrid>
         </Box>
-    </Section> < />
+    </Section> 
   );
 };
 
