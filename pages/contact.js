@@ -10,21 +10,30 @@ import { Text,
   Button,
   } from '@chakra-ui/react'
 
+  import {GoMarkGithub} from 'react-icons/go'
+  import {MdWavingHand} from 'react-icons/md'
+
+
+  import NextLink  from 'next/link'
+  
+
 
 import Section from '../src/components/section'
  
-const IMAGE = 'https://t4.ftcdn.net/jpg/03/52/27/51/240_F_352275189_nZYNVgytI13P58jgqxpQCGs7wTdeA3In.jpg';
+const HELLO_IMAGE = 'https://images.unsplash.com/photo-1535551951406-a19828b0a76b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=866&q=80';
+const CONTRIBUTE_IMAGE = "https://images.unsplash.com/photo-1483817101829-339b08e8d83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=804&q=80"
+
 const Contact = () => {
   return(
   <>
     <Section delay={0.3}>
-      <Text
+      <Heading
         fontSize='6xl'
         align="center"
           padding={6}
         >
        Contact Us
-       </Text>
+       </Heading>
 
     <Center py={12}>
       <SimpleGrid
@@ -53,7 +62,7 @@ const Contact = () => {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
+            backgroundImage: `url(${HELLO_IMAGE})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -67,7 +76,7 @@ const Contact = () => {
             height={230}
             width={445}
             objectFit={'cover'}
-            src={IMAGE}
+            src={HELLO_IMAGE}
           />
         </Box>
         <Stack pt={10} align={'center'}>
@@ -76,12 +85,15 @@ const Contact = () => {
           </Heading>
           <Stack direction={'row'}>
             <Text fontSize={'sm'} align={'center'}>
-              Do you want to say hi? Or perhaps you want to share some memes? Please  come through, we are waiting for you.
+              Do you want to make an enquiry? Or perhaps you want to share some memes? Please  come through....
                    
              </Text>
               
             </Stack>
-                   <Button>Get In Touch</Button>
+                   <NextLink href="mailto:jshubzw@gmail.com" target="_blank" passHref isExternal>
+                   
+                   <Button  colorScheme={"green"} rightIcon={<MdWavingHand/>}>Get In Touch</Button>
+                   </NextLink>
         </Stack>
       </Box>
                 <Box
@@ -107,7 +119,7 @@ const Contact = () => {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
+            backgroundImage: `url(${CONTRIBUTE_IMAGE})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -119,9 +131,9 @@ const Contact = () => {
           <Image
             rounded={'lg'}
             height={230}
-            width={300}
+            width={"full"}
             objectFit={'cover'}
-            src={IMAGE}
+            src={CONTRIBUTE_IMAGE}
           />
         </Box>
         <Stack pt={10} align={'center'}>
@@ -138,21 +150,15 @@ const Contact = () => {
              </Text>
               
             </Stack>
-                   <Button>Get In Touch</Button>
+            <Link target="_blank" href='https://github.com/JS-Hub-ZW/hackathon-board' passHref isExternal>
+                   <Button colorScheme="green" rightIcon={<GoMarkGithub/>}>Hack the Board!</Button>
+                   </Link>
         </Stack>
       </Box>
       </SimpleGrid>
     </Center>
 
-        <Heading align="center">
-          Press Inquiry ?
-        </Heading>
-
-         <Text align="center">
-         <Link
-          to="mailto:jshubzw@gmail.com"
-          ><Text color="blackAlpha.800">Email us at jshubzw@gmail.com</Text></Link>
-         </Text>
+    
 
           <Text 
             padding={8}></Text>

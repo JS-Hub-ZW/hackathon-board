@@ -1,4 +1,5 @@
 
+import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import HomeHackathons from "../src/components/home/hackathons";
 import HomeHero from "../src/components/home/hero";
@@ -19,9 +20,15 @@ export default function Home({hackathons}) {
 
   return (
     <>
-      <HomeHero />
-      <HomeHackathons />
-      <HomeCallToAction/>
+      <Box>
+        <HomeHero />
+      </Box>
+      <Box>
+        <HomeHackathons />
+      </Box>
+      <Box>
+        <HomeCallToAction/>
+      </Box>
     </>
   );
 }

@@ -46,10 +46,10 @@ const navItems = [
   //   linkName: "Leaderboard",
   //   linkHref: "/leaderboard",
   // },
-  // {
-  //   linkName: "About",
-  //   linkHref: "/about",
-  // },
+  {
+    linkName: "About",
+    linkHref: "/about",
+  },
   {
     linkName: "Contact",
     linkHref: "/contact",

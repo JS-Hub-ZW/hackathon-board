@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 
 export default function HomeCallToAction() {
   return (
@@ -37,9 +38,8 @@ export default function HomeCallToAction() {
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+            Hackathons have many benefits. You innovate and others benefit from your work. Your potential gets realized and you get rewarded. 
+            If you are an adrenaline junkie, hackathons will take good care of you :D. 
           </Text>
           <Stack
             direction={'column'}
@@ -55,11 +55,12 @@ export default function HomeCallToAction() {
               _hover={{
                 bg: 'green.500',
               }}>
-              Get Started
+              Ok! Lets Do This
             </Button>
-            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+
+            <Link variant={'link'} href="/about" colorScheme={'blue'} size={'sm'}>
               Learn more
-            </Button>
+            </Link>
             <Box>
               <Icon
                 as={Arrow}
@@ -76,7 +77,7 @@ export default function HomeCallToAction() {
                 right={'-125px'}
                 top={'-15px'}
                 transform={'rotate(10deg)'}>
-                Starting at $15/mo
+                Hackety hack hack!
               </Text>
             </Box>
           </Stack>

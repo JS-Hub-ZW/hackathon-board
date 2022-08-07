@@ -19,6 +19,7 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import { useHackathonContext } from '../../state/provider.state';
 import { getPublishedTime, processName } from '../../utils/general.utils';
 
@@ -40,13 +41,14 @@ const data = {
 function HackathonCard({hackathons}) {
   return (
     <SimpleGrid
-      columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+      columns={{ base: 1, sm: 2, md: 3, lg: 3 }}
     >
       {
         hackathons.map((hackathon, i) => {
 
           console.log(hackathon)
           return (<GridItem key={i} >
+            <Link href={`/detail/${hackathon.id}`} passHref>
             <Flex p={3} w="full" alignItems="center" justifyContent="center">
               <Box
                 bg={useColorModeValue('white', 'gray.800')}
@@ -95,6 +97,7 @@ function HackathonCard({hackathons}) {
               </Box>
 
             </Flex>
+            </Link>
           </GridItem>)
         })
       }

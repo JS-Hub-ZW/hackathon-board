@@ -33,3 +33,8 @@ export const processName = (name, limit=30) => {
     }
     return name;
 }
+
+
+export const titleCase = (str) => {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
