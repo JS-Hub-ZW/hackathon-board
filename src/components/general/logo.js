@@ -37,7 +37,7 @@ const Logo = () => {
    
             
           >
-            Hackathon Board
+          HACKBOARD
           </Text>
         </LogoBox>
       </a>
