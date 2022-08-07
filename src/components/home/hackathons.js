@@ -41,7 +41,7 @@ const data = {
 function HackathonCard({hackathons}) {
   return (
     <SimpleGrid
-      columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+      columns={{ base: 1, sm: 2, md: 3, lg: 3 }}
     >
       {
         hackathons.map((hackathon, i) => {
