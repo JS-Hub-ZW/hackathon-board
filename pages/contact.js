@@ -11,7 +11,10 @@ import { Text,
   } from '@chakra-ui/react'
 
   import {GoMarkGithub} from 'react-icons/go'
+  import {MdWavingHand} from 'react-icons/md'
 
+
+  import NextLink  from 'next/link'
   
 
 
@@ -24,13 +27,13 @@ const Contact = () => {
   return(
   <>
     <Section delay={0.3}>
-      <Text
+      <Heading
         fontSize='6xl'
         align="center"
           padding={6}
         >
        Contact Us
-       </Text>
+       </Heading>
 
     <Center py={12}>
       <SimpleGrid
@@ -82,12 +85,15 @@ const Contact = () => {
           </Heading>
           <Stack direction={'row'}>
             <Text fontSize={'sm'} align={'center'}>
-              Do you want to say hi? Or perhaps you want to share some memes? Please  come through, we are waiting for you.
+              Do you want to make an enquiry? Or perhaps you want to share some memes? Please  come through....
                    
              </Text>
               
             </Stack>
-                   <Button>Get In Touch</Button>
+                   <NextLink href="mailto:jshubzw@gmail.com" target="_blank" passHref isExternal>
+                   
+                   <Button  colorScheme={"green"} rightIcon={<MdWavingHand/>}>Get In Touch</Button>
+                   </NextLink>
         </Stack>
       </Box>
                 <Box
@@ -152,15 +158,7 @@ const Contact = () => {
       </SimpleGrid>
     </Center>
 
-        <Heading align="center">
-          Press Inquiry ?
-        </Heading>
-
-         <Text align="center">
-         <Link
-          to="mailto:jshubzw@gmail.com"
-          ><Text color="blackAlpha.800">Email us at jshubzw@gmail.com</Text></Link>
-         </Text>
+    
 
           <Text 
             padding={8}></Text>
