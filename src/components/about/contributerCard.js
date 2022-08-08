@@ -14,7 +14,7 @@ import {
 
   import {GoMarkGithub} from 'react-icons/go'
   
-  export default function TeamCards({contributer}) {
+  export default function ContributerCard({contributer}) {
     return (
       <Center py={6}>
         <Box
