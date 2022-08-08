@@ -5,10 +5,10 @@ import {
     Button,
     Text,
 } from "@chakra-ui/react";
-import Section from "../src/components/section";
 
-function Purpose() {
+function PurposeAndAudience() {
     return (  <Box>
+        <Box mb={10}>
         <Heading>Purpose</Heading>
         <Text  mt={5}>The purpose of Hackthon Board is to display hackathons that people can see and  participate. Its kind boring
           hear that some people just won a hackathon but you didnt hear about it. We want to help people to find hackathons 
@@ -24,7 +24,8 @@ function Purpose() {
           Hackthon Board displays hackathons in Zimbabwe and mainly targets Zimbabwe hackers so they showcase their skills. However we may
           display hackathons in other countries and target other countries hackers. 
         </Text>
+    </Box>
     </Box>);
 }
 
-export default Purpose;
+export default PurposeAndAudience;
