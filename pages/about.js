@@ -7,7 +7,7 @@ import {
 } from "@chakra-ui/react";
 import Section from "../src/components/section";
 import Contributers from "../src/components/about/contributers";
-import Purpose from "../src/components/about/purpose";
+import PurposeAndAudience from "../src/components/about/purposeAndAudience";
 
 
 const About = () => {
@@ -25,8 +25,7 @@ const About = () => {
       
 
        <Box mb={10}>
-
-           <Purpose/>
+           <PurposeAndAudience/>
         </Box>
 
 
