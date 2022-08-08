@@ -1,20 +1,13 @@
 import NextLink from "next/link";
 import {
-    Link,
-    Stack,
     Heading,
     Box,
     Button,
     Text,
-    List,
-    ListItem
 } from "@chakra-ui/react";
 import Section from "../src/components/section";
-import EmailSubs from "../src/components/emailsubs";
-import TeamCards from "../src/components/about/teamCard";
-import {SimpleGrid} from "@chakra-ui/react";
-import {GridItem} from "@chakra-ui/react";
-import CONTRIBUTERS from "../src/data/contributers";
+import Contributers from "../src/components/about/contributers";
+
 
 const About = () => {
     return (
@@ -51,26 +44,7 @@ const About = () => {
 
 
         <Box mb={10}>
-            <Heading>Contributers</Heading>
-
-            <Text mt={5} mb={10} align={"center"}>This project wouldnt come this far without
-                these lovely heroes. I mean if you need someone to do your work, Please get in
-                touch with these guys. They are awesome!.
-            </Text>
-
-            <SimpleGrid
-                columns={{
-                base: 1,
-                sm: 2,
-                md: 3,
-                lg: 4
-            }}
-                spacing="12">
-                {CONTRIBUTERS.map(contributer => (
-                    <GridItem><TeamCards contributer={contributer}/></GridItem>
-                ))}
-
-            </SimpleGrid>
+           <Contributers/>
         </Box>
     </Section> 
   );
