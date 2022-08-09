@@ -7,7 +7,6 @@ import {
 } from "@chakra-ui/react";
 import {SimpleGrid} from "@chakra-ui/react";
 import {GridItem} from "@chakra-ui/react";
-import CONTRIBUTERS from "../../data/contributers";
 import { useHackathonContext } from "../../state/provider.state";
 import ContributerCard from "./contributerCard";
 
