@@ -1,42 +1,42 @@
 export const requestData = async (url, method, data) => {
 
-    let data
+    let res
 
     if (method === 'GET') {
-        let res = await fetch(url);
-        data = await res.json();
+        res = await fetch(url);
+        res = await res.json();
     }
 
     if (method === 'POST') {
-        let res = await fetch(url, {
+        res = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data)
         });
 
-        data = await res.json();
+        res = await res.json();
     }
 
     if (method === 'PUT') {
-        let res = await fetch(url, {
+        res = await fetch(url, {
             method: 'PUT',
             body: JSON.stringify(data)
         });
 
-        data = await res.json();
+        res = await res.json();
         
     }
 
     if (method === 'DELETE') {
-        let res = await fetch(url, {
+        res = await fetch(url, {
             method: 'DELETE'
         });
 
-        data = await res.json();
+        res = await res.json();
         
     }
 
-    if (data){
-        return data;
+    if (res){
+        return res;
     }else{
         return null;
     }

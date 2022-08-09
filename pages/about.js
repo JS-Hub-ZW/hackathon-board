@@ -1,4 +1,5 @@
-import NextLink from "next/link";
+import { useEffect } from "react";
+
 import {
     Heading,
     Box,
@@ -10,6 +11,8 @@ import Contributers from "../src/components/about/contributers";
 import PurposeAndAudience from "../src/components/about/purposeAndAudience";
 import { requestData } from "../src/utils/network";
 import { useHackathonContext } from "../src/state/provider.state";
+
+
 
 
 

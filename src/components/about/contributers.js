@@ -16,9 +16,11 @@ function Contributers() {
 
     const  {state} = useHackathonContext()
 
+    console.log("Current state:",state)
+
     return ( 
     
-    <Box><Heading>Contributers</Heading>
+    <Box><Heading>Contributors</Heading>
 
     <Text mt={5} mb={10} align={"center"}>This project wouldnt come this far without
         these lovely heroes. I mean if you need someone to do your work, Please get in
@@ -33,7 +35,7 @@ function Contributers() {
         lg: 4
     }}
         spacing="12">
-        {state.contributers.map(contributer => (
+        {state.contributors.map(contributer => (
             <GridItem><ContributerCard contributer={contributer}/></GridItem>
         ))}
 
