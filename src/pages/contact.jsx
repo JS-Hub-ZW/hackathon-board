@@ -19,7 +19,7 @@ import Section from '../components/section'
 const Contact = () => {
   return (
     <>
-      <Section delay={0.1}>
+      <Section delay={0.2}>
         <Heading
           fontSize='6xl'
           align="center"

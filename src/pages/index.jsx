@@ -4,8 +4,9 @@ import { useEffect } from "react";
 import HomeHackathons from "../components/home/hackathons";
 import HomeHero from "../components/home/hero";
 import HomeCallToAction from "../components/home/homecta";
+import Section from "../components/section";
 import { useHackathonContext } from "../state/provider.state";
-import { requestData } from "../utils/network";
+import { requestData } from "../utils/network.utils";
 
 
 
@@ -20,7 +21,7 @@ export default function Home({hackathons}) {
   }, [hackathons]);
 
   return (
-    <>
+    <Section delay={0.2}>
       <Box>
         <HomeHero />
       </Box>
@@ -30,7 +31,7 @@ export default function Home({hackathons}) {
       <Box>
         <HomeCallToAction/>
       </Box>
-    </>
+    </Section>
   );
 }
 
