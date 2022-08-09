@@ -1,9 +1,10 @@
 import { Divider, Flex, HStack, SimpleGrid, Wrap } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
-import { GridItem } from "@chakra-ui/react";
-import { Grid } from "@chakra-ui/react";
 import { Stack, Box, Image, Text } from "@chakra-ui/react";
-import { SerializeToJSX } from "../../src/components/general/SerializeToJSX";
+import DescriptionItem from "../../components/hackathonDetails/descriptionItem";
+import DetailItem from "../../components/hackathonDetails/detailItem";
+import Section from "../../components/section";
+
 import { CashIcon } from "../../src/icons/cashIcon";
 import { EyeIcon } from "../../src/icons/eyeIcon";
 import { GlobeIcon } from "../../src/icons/globeIcon";
@@ -11,9 +12,10 @@ import { UsersIcon } from "../../src/icons/users";
 import { titleCase } from "../../src/utils/general.utils";
 
 
+
 export default function Detail({hackathon}) {
     return (
-        <>
+        <Section delay={0.2}>
             <HStack>
                 <Image
                     roundedBottom={"lg"}
@@ -66,30 +68,12 @@ export default function Detail({hackathon}) {
                 </Box>
             </Stack>
 
-        </>
+        </Section>
     )
 }
 
-function DetailItem({ icon, text }) {
-    return (
-        <HStack>
-            {icon}
-            <Text fontWeight={"light"}>{text}</Text>
-        </HStack>
-    )
-}
 
-function DescriptionItem({ heading, isRichText, children }) {
 
-    console.log("The Text: ", children)
-    return (
-        <Stack mt={"3"} mb={"6"}>
-            <Heading fontSize={"1.5em"}>{heading}</Heading>
-    
-            {isRichText && children && children.length > 0 && typeof(children) == 'object' ? SerializeToJSX(children) : <Text></Text> }
-        </Stack>
-    )
-}
 
 
 export async function getStaticPaths() {
