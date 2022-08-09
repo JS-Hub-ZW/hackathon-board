@@ -6,6 +6,11 @@ const reducer = (state, action) => {
                 ...state,
                 hackathons: action.payload
             }
+        case "ADD_CONTRIBUTERS":
+            return {
+                ...state,
+                contributors: action.payload
+            }
         default:
             return state
         
