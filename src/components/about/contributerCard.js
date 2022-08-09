@@ -31,7 +31,7 @@ import {
             <Avatar
               size={'xl'}
               src={
-                contributer.image
+                contributer.imageURL
               }
               alt={'Author'}
               css={{
@@ -47,7 +47,7 @@ import {
               <Text color={'gray.500'}>{contributer.role}</Text>
             </Stack>
 
-            <Link href={contributer.link} passHref isExternal target="_blank">
+            <Link href={contributer.url} passHref isExternal target="_blank">
             <Button
             w={'full'}
             
