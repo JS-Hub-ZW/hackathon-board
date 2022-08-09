@@ -15,11 +15,19 @@ export function HackathonProvider({ children }) {
     })
   }
 
+  const populateContributers = (contributers) => {
+    dispatch({
+      type: "ADD_CONTRIBUTERS",
+      payload: contributers
+    })
+  }
+
   return (
     <HackathonContext.Provider value={{
       state,
       dispatch,
-      populateHackathons
+      populateHackathons,
+      populateContributers
     }}>{children}</HackathonContext.Provider>
   );
 }
