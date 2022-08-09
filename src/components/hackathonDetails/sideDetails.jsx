@@ -6,8 +6,11 @@ import DetailItem from "../../components/hackathonDetails/detailItem";
 import { EyeIcon } from "../icons/eyeIcon";
 import { GlobeIcon } from "../icons/globeIcon";
 import { UsersIcon } from "../icons/users";
-import { titleCase } from "../utils/general.utils";
 import { CashIcon } from "../icons/cashIcon";
+import { titleCase } from "../../utils/general.utils";
+
+
+
 
 export default function HackathonSideDetails({ hackathon }) {
   return (
