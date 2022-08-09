@@ -9,7 +9,7 @@ import {
 import Section from "../components/section";
 import Contributers from "../components/about/contributers";
 import PurposeAndAudience from "../components/about/purposeAndAudience";
-import { requestData } from "../utils/network";
+import { requestData } from "../utils/network.utils";
 import { useHackathonContext } from "../state/provider.state";
 
 
