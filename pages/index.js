@@ -5,6 +5,7 @@ import HomeHackathons from "../src/components/home/hackathons";
 import HomeHero from "../src/components/home/hero";
 import HomeCallToAction from "../src/components/home/homecta";
 import { useHackathonContext } from "../src/state/provider.state";
+import { requestData } from "../src/utils/network";
 
 
 
@@ -35,15 +36,14 @@ export default function Home({hackathons}) {
 
 
 export async function getStaticProps() {
-  const options = {method: 'GET'};
   const mainUrl = `${process.env.BACKEND_ENDPOINT}/hackathons?depth=2&`
-  let upcomingHackathons =  await fetch(`${mainUrl}where[timepoint][equals]=upcoming`, options)
-  let ongoingHackathons = await fetch(`${mainUrl}where[timepoint][equals]=ongoing`, options)
-  let pastHackathons = await fetch(`${mainUrl}where[timepoint][equals]=past`, options)
 
-  let upcomingHackathonsData = await upcomingHackathons.json()
-  let ongoingHackathonsData = await ongoingHackathons.json()
-  let pastHackathonsData = await pastHackathons.json()
+  let method = 'GET';
+
+
+  let upcomingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=upcoming`, method)
+  let ongoingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=ongoing`, method)
+  let pastHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=past`, method)
 
 
   let hackathons = [

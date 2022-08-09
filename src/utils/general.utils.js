@@ -1,6 +1,3 @@
-
-
-
 let months = [
     'Jan',
     'Feb',
