@@ -8,10 +8,14 @@ import {
 import {SimpleGrid} from "@chakra-ui/react";
 import {GridItem} from "@chakra-ui/react";
 import CONTRIBUTERS from "../../data/contributers";
+import { useHackathonContext } from "../../state/provider.state";
 import ContributerCard from "./contributerCard";
 
 
 function Contributers() {
+
+    const  {state} = useHackathonContext()
+
     return ( 
     
     <Box><Heading>Contributers</Heading>
@@ -29,7 +33,7 @@ function Contributers() {
         lg: 4
     }}
         spacing="12">
-        {CONTRIBUTERS.map(contributer => (
+        {state.contributers.map(contributer => (
             <GridItem><ContributerCard contributer={contributer}/></GridItem>
         ))}
 
