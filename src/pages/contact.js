@@ -9,12 +9,12 @@ import {
   SimpleGrid,
 
 } from '@chakra-ui/react'
-import Contribute from '../src/components/contact/contribute'
-import SayHello from '../src/components/contact/sayHello'
+import Contribute from '../components/contact/contribute'
+import SayHello from '../components/contact/sayHello'
 
 
 
-import Section from '../src/components/section'
+import Section from '../components/section'
 
 const Contact = () => {
   return (

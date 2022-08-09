@@ -1,11 +1,11 @@
 
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
-import HomeHackathons from "../src/components/home/hackathons";
-import HomeHero from "../src/components/home/hero";
-import HomeCallToAction from "../src/components/home/homecta";
-import { useHackathonContext } from "../src/state/provider.state";
-import { requestData } from "../src/utils/network";
+import HomeHackathons from "../components/home/hackathons";
+import HomeHero from "../components/home/hero";
+import HomeCallToAction from "../components/home/homecta";
+import { useHackathonContext } from "../state/provider.state";
+import { requestData } from "../utils/network";
 
 
 

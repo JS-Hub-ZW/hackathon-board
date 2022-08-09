@@ -6,11 +6,11 @@ import {
     Button,
     Text,
 } from "@chakra-ui/react";
-import Section from "../src/components/section";
-import Contributers from "../src/components/about/contributers";
-import PurposeAndAudience from "../src/components/about/purposeAndAudience";
-import { requestData } from "../src/utils/network";
-import { useHackathonContext } from "../src/state/provider.state";
+import Section from "../components/section";
+import Contributers from "../components/about/contributers";
+import PurposeAndAudience from "../components/about/purposeAndAudience";
+import { requestData } from "../utils/network";
+import { useHackathonContext } from "../state/provider.state";
 
 
 
