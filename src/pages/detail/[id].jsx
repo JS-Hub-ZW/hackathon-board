@@ -3,6 +3,7 @@ import { Stack, Box, Image, Text } from "@chakra-ui/react";
 import HackathonMainDetail from "../../components/hackathonDetails/mainDetails";
 import HackathonSideDetails from "../../components/hackathonDetails/sideDetails";
 import Section from "../../components/section";
+import { requestData } from "../../utils/network.utils";
 
 
 
@@ -39,13 +40,12 @@ export default function Detail({hackathon}) {
 
 export async function getStaticPaths() {
     // get total docs 
-    const response = await fetch(`${process.env.BACKEND_ENDPOINT}/hackathons`);
-    const resJson = await response.json();
-    const totalDocs = resJson.totalDocs;
+    let method = "GET"
+    const response = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons`, method);
+    const totalDocs = response.totalDocs;
 
     // Now fetch all hackathons
-    const res = await fetch(`${process.env.BACKEND_ENDPOINT}/hackathons?limit=${totalDocs}&depth=2`);
-    const hackathons = await res.json()
+    const hackathons = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons?limit=${totalDocs}&depth=2`, method);
     const paths = hackathons.docs.map(hackathon => ({params: {id: hackathon.id}}))
     return {
         paths,
@@ -55,8 +55,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params: {id}}) {
     console.log("The id is: ", id);
-    const res = await fetch(`${process.env.BACKEND_ENDPOINT}/hackathons/${id}`)
-    const hackathon = await res.json()
+    let method = "GET"
+    const hackathon = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons/${id}`, method)
+
     return {
         props: {
             hackathon
