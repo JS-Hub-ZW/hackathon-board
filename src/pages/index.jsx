@@ -42,15 +42,13 @@ export async function getStaticProps() {
   let method = 'GET';
 
 
-  let upcomingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=upcoming`, method)
-  let ongoingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=ongoing`, method)
-  let pastHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=past`, method)
+  // let upcomingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=upcoming`, method)
+  // let ongoingHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=ongoing`, method)
+  // let pastHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=past`, method)
 
 
   let hackathons = [
-    ...upcomingHackathonsData.docs,
-    ...ongoingHackathonsData.docs,
-    ...pastHackathonsData.docs
+ 
   ]
 
   console.log("Hackathons Length: ", hackathons.length)
