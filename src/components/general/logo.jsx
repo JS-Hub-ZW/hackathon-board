@@ -29,14 +29,15 @@ const Logo = () => {
       <a>
         
         <LogoBox>
-        <Image  src="/images/sm.png" width={20} height={20} alt="logo" />
+        {/* <Image  src="/images/sm.png" width={20} height={20} alt="logo" /> */}
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
+   
             
           >
-            Hackathon Board
+          HACKBOARD
           </Text>
         </LogoBox>
       </a>

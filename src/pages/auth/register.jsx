@@ -1,5 +1,5 @@
 import React from 'react'
-import RegisterCard from '../../components/auth/register'
+import RegisterCard from '../../src/components/auth/register'
 
 export default function Register() {
   return (
