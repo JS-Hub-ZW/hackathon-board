@@ -26,8 +26,7 @@ const Logo = () => {
 
   return (
     <Link href="/" scroll={false}>
-      <a>
-        
+      
         <LogoBox>
         {/* <Image  src="/images/sm.png" width={20} height={20} alt="logo" /> */}
           <Text
@@ -40,7 +39,6 @@ const Logo = () => {
           HACKBOARD
           </Text>
         </LogoBox>
-      </a>
     </Link>
   )
 }
