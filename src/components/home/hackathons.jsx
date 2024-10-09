@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react';
 import HackathonCard from './hakacthonCard';
 import { useSelector } from 'react-redux';
+import React from 'react';
+
 
 
 function HomeHackathons() {
@@ -25,7 +27,7 @@ function HomeHackathons() {
 
 
   return (
-    <>
+<React.Fragment>    
       <Heading
         fontWeight={600}
         fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
@@ -51,7 +53,7 @@ function HomeHackathons() {
         </TabPanels>
       </Tabs>
 
-    </>
+    </React.Fragment>
   );
 }
 

@@ -3,10 +3,11 @@ import NavBar from "../general/navbr";
 
 import { Box, Container } from "@chakra-ui/react";
 import Footer from "../general/footer";
+import React from "react";
 
 const Main = ({ children, router }) => {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="JSZW" />
@@ -24,7 +25,7 @@ const Main = ({ children, router }) => {
         </Container>
         <Footer />
       </Box>
-    </>
+    </React.Fragment>
   );
 };
 
