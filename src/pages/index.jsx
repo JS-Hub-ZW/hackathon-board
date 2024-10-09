@@ -7,16 +7,19 @@ import HomeCallToAction from "../components/home/homecta";
 import Section from "../components/section";
 import { useHackathonContext } from "../state/provider.state";
 import { requestData } from "../utils/network.utils";
+import events from "../../data/events";
+import { useDispatch } from "react-redux";
+import { addHackathons } from "../state/reducer.state";
 
 
 
 export default function Home({hackathons}) {
 
-  const {populateHackathons} = useHackathonContext();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (hackathons.length > 0){
-      populateHackathons(hackathons);
+      dispatch(addHackathons(hackathons))
     }
   }, [hackathons]);
 
@@ -47,9 +50,7 @@ export async function getStaticProps() {
   // let pastHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=past`, method)
 
 
-  let hackathons = [
- 
-  ]
+  let hackathons = events
 
   console.log("Hackathons Length: ", hackathons.length)
 

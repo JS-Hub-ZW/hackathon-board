@@ -10,14 +10,16 @@ import {
   TabPanel,
   Heading,
 } from '@chakra-ui/react';
-import { useHackathonContext } from '../../state/provider.state';
 import HackathonCard from './hakacthonCard';
+import { useSelector } from 'react-redux';
+import React from 'react';
+
 
 
 function HomeHackathons() {
 
+  let  hackathons = useSelector(state => state.hackathon.hackathons)
 
-  const {state} = useHackathonContext()
 
   
   const { colorMode, toggleColorMode } = useColorMode()
@@ -25,7 +27,7 @@ function HomeHackathons() {
 
 
   return (
-    <>
+<React.Fragment>    
       <Heading
         fontWeight={600}
         fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
@@ -40,18 +42,18 @@ function HomeHackathons() {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <HackathonCard hackathons={state.hackathons.filter(h => h.timepoint == "ongoing")} />
+            <HackathonCard hackathons={hackathons.filter(h => h.timepoint == "ongoing")} />
           </TabPanel>
           <TabPanel>
-            <HackathonCard hackathons={state.hackathons.filter(h => h.timepoint == "upcoming")}/>
+            <HackathonCard hackathons={hackathons.filter(h => h.timepoint == "upcoming")}/>
           </TabPanel>
           <TabPanel>
-            <HackathonCard hackathons={state.hackathons.filter(h => h.timepoint == "past")}/>
+            <HackathonCard hackathons={hackathons.filter(h => h.timepoint == "past")}/>
           </TabPanel>
         </TabPanels>
       </Tabs>
 
-    </>
+    </React.Fragment>
   );
 }
 

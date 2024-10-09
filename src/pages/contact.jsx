@@ -12,13 +12,12 @@ import {
 import Contribute from '../components/contact/contribute'
 import SayHello from '../components/contact/sayHello'
 
-
-
 import Section from '../components/section'
+import React from 'react'
 
 const Contact = () => {
   return (
-    <>
+    <React.Fragment>
       <Section delay={0.2}>
         <Heading
           fontSize='6xl'
@@ -43,7 +42,7 @@ const Contact = () => {
           padding={8}></Text>
       </Section>
 
-    </>
+    </React.Fragment>
   )
 }
 export default Contact

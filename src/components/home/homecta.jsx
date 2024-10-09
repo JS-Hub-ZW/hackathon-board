@@ -11,10 +11,11 @@ import {
   createIcon,
 } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react';
+import React from 'react';
 
 export default function HomeCallToAction() {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -83,7 +84,7 @@ export default function HomeCallToAction() {
           </Stack>
         </Stack>
       </Container>
-    </>
+    </React.Fragment>
   );
 }
 

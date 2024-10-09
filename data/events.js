@@ -1,4 +1,4 @@
-events = [
+const events = [
   
     {
       "date": "2023-04-15",
@@ -71,4 +71,4 @@ events = [
 ]
     
     
-module.exports = events 
+export default events;
