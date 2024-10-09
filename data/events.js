@@ -1,4 +1,4 @@
-events = [
+const events = [
   
     {
       "date": "2023-04-15",
