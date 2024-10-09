@@ -7,6 +7,7 @@ import HomeCallToAction from "../components/home/homecta";
 import Section from "../components/section";
 import { useHackathonContext } from "../state/provider.state";
 import { requestData } from "../utils/network.utils";
+import events from "../../data/events";
 
 
 
