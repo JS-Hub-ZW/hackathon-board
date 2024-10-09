@@ -47,9 +47,7 @@ export async function getStaticProps() {
   // let pastHackathonsData = await requestData(`${mainUrl}where[timepoint][equals]=past`, method)
 
 
-  let hackathons = [
- 
-  ]
+  let hackathons = events
 
   console.log("Hackathons Length: ", hackathons.length)
 
