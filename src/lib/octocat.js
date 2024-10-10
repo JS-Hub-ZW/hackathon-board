@@ -3,8 +3,11 @@
 import { Octokit } from "octokit";
 
 // https://github.com/octokit/core.js#readme
+
+
+
 const octokit = new Octokit({
-  auth: "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",
+    auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
 });
 
 const owner = "JS-Hub-ZW";
