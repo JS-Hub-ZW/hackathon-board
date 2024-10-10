@@ -16,7 +16,9 @@ let months = [
 
 export const getPublishedTime = (timeString) => {
 
-    let date = new Date(timeString);
+    let date = new Date();
+    if (timeString)
+         date = new Date(timeString);
     let month = months[date.getMonth()];
     let day = date.getDate();
     let year = date.getFullYear();
