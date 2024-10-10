@@ -1,3 +1,5 @@
+"user client";
+
 import { useEffect } from "react";
 
 import {
@@ -9,8 +11,9 @@ import {
 import Section from "../components/section";
 import Contributers from "../components/about/contributers";
 import PurposeAndAudience from "../components/about/purposeAndAudience";
-import { requestData } from "../utils/network.utils";
-import { useHackathonContext } from "../state/provider.state";
+import { getContributers } from "../lib/octocat";
+import { useDispatch } from "react-redux";
+import { addContributors } from "../state/reducer.state";
 
 
 
@@ -18,14 +21,14 @@ import { useHackathonContext } from "../state/provider.state";
 
 const About = ({contributers}) => {
 
-  const { populateContributers } = useHackathonContext();
+   const dispatch = useDispatch()
 
     useEffect(() => {
-        if (contributers.length > 0){
-            populateContributers(contributers);
+        if (contributors.length > 0){
+          dispatch(addContributors(contributors))
         }
       
-    }, [contributers]);
+    }, [contributors]);
 
     return (
       
@@ -56,15 +59,13 @@ export default About;
 
 
 export const getStaticProps = async () => {
+  let contributors = await getContributers()
 
-  const mainUrl = `${process.env.BACKEND_ENDPOINT}/contributers`
-  const method = "GET"
-
-  let contributers = await requestData(mainUrl, method)
+  console.log("Contributors Length: ", contributors.length)
 
   return {
     props: {
-      contributers: contributers.docs 
+      contributors: contributors
     }
   }
 }

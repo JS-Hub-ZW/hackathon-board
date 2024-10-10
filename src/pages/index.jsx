@@ -1,4 +1,4 @@
-
+"user client";
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import HomeHackathons from "../components/home/hackathons";
