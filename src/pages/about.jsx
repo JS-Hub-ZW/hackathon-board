@@ -19,7 +19,9 @@ import { addContributors } from "../state/reducer.state";
 
 
 
-const About = ({contributers}) => {
+const About = ({contributors}) => {
+
+  console.log("About contributors: ", contributors)
 
    const dispatch = useDispatch()
 
