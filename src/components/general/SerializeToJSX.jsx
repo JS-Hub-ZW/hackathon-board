@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import escapeHTML from 'escape-html';
 import { Text } from 'slate';
+import Link from 'next/link';
 
 export const SerializeToJSX = (children) => Array.from(children).map((node, i) => {
   if (Text.isText(node)) {
@@ -83,19 +84,19 @@ export const SerializeToJSX = (children) => Array.from(children).map((node, i) =
       );
     case 'link':
       return (
-        <a
+        <Link
           href={escapeHTML(node.url)}
           key={i}
         >
           {SerializeToJSX(node.children)}
-        </a>
+        </Link>
       );
 
     default:
       return (
-        <p key={i}>
+        <div key={i}>
           {SerializeToJSX(node.children)}
-        </p>
+        </div>
       );
   }
 });
