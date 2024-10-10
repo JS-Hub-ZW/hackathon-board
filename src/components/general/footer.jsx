@@ -1,12 +1,13 @@
-import { Link } from '@chakra-ui/react'
+
 import { Box } from '@chakra-ui/react'
+import NextLink from 'next/link';
 
 
 
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()} JavaScript Hub Zimbabwe. All Rights Reserved. Images from <Link target={"_blank"}  to="https://unsplash.com/" isExternal passHref>Unsplash</Link>
+      &copy; {new Date().getFullYear()} JavaScript Hub Zimbabwe. All Rights Reserved. Images from <NextLink target={"_blank"}  href="https://unsplash.com/" >Unsplash</NextLink>
     </Box>
   )
 }

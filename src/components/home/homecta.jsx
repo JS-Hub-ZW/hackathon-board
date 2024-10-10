@@ -1,3 +1,5 @@
+"use client"
+
 import Head from 'next/head';
 import {
   Box,
@@ -10,8 +12,9 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/react';
 import React from 'react';
+import NextLink from 'next/link';
+
 
 export default function HomeCallToAction() {
   return (
@@ -59,9 +62,10 @@ export default function HomeCallToAction() {
               Ok! Lets Do This
             </Button>
 
-            <Link variant={'link'} href="/about" colorScheme={'blue'} size={'sm'}>
+            {/* colorScheme={'blue'} size={'sm'} */}
+            <NextLink  href="/about" >
               Learn more
-            </Link>
+            </NextLink>
             <Box>
               <Icon
                 as={Arrow}

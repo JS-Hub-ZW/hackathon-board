@@ -2,7 +2,6 @@
 import {
     Text,
     Heading,
-    Link,
     Box,
     Center,
     useColorModeValue,
@@ -52,7 +51,7 @@ function SayHello({ useColorModeValue }) {
                 </Text>
 
             </Stack>
-            <NextLink href="mailto:jshubzw@gmail.com" target="_blank" passHref isExternal>
+            <NextLink href="mailto:jshubzw@gmail.com" target="_blank"  isExternal>
 
                 <Button colorScheme={"green"} rightIcon={<MdWavingHand />}>Get In Touch</Button>
             </NextLink>

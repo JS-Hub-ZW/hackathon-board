@@ -3,8 +3,6 @@
 import {
   Text,
   Heading,
-  Link,
-  Box,
   Center,
   useColorModeValue,
   Stack,
@@ -17,7 +15,7 @@ import SayHello from '../components/contact/sayHello'
 import Section from '../components/section'
 import React from 'react'
 
-const Contact = () => {
+export default function Contact(){
   return (
     <React.Fragment>
       <Section delay={0.2}>
@@ -47,5 +45,4 @@ const Contact = () => {
     </React.Fragment>
   )
 }
-export default Contact
 

@@ -2,10 +2,12 @@
 
 A site where people can post hackathons and register hackathons
 
-## Prefered Stack
+## Stack
 
 - NextJS
-- TailwindCSS
+- Chakra UI
+- Octocat
+
 
 ## Users
 

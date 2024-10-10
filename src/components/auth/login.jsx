@@ -6,12 +6,12 @@ import {
     Input,
     Checkbox,
     Stack,
-    Link,
     Button,
     Heading,
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
+  import NextLink from 'next/link';
   
   export default function LoginCard() {
     return (
@@ -24,7 +24,7 @@ import {
           <Stack align={'center'}>
             <Heading fontSize={'4xl'}>Sign in to your account</Heading>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to start <Link color={'blue.400'}>hacking</Link> 👨‍💻
+              to start <NextLink href="/">hacking</NextLink> 👨‍💻
             </Text>
           </Stack>
           <Box
@@ -47,7 +47,8 @@ import {
                   align={'start'}
                   justify={'space-between'}>
                   <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
+                  {/* color={'blue.400'} */}
+                  <NextLink  href="/">Forgot password?</NextLink>
                 </Stack>
                 <Button
                   bg={'blue.400'}

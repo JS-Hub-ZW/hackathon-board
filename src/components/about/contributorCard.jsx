@@ -12,7 +12,6 @@ import {
     Button,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import { Link } from '@chakra-ui/react'
 import React from 'react';
 
   import {GoMarkGithub} from 'react-icons/go'

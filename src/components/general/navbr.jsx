@@ -3,12 +3,12 @@ import NextLink from "next/link";
 import {
   Container,
   Box,
-  Link,
   Button,
   Stack,
   Heading,
   Flex,
   Menu,
+  Link as ChakraLink,
   MenuItem,
   MenuList,
   MenuButton,
@@ -19,20 +19,26 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
+
   const active = path === href;
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   return (
-    <NextLink href={href} passHref scroll={false}>
-      <Link
+    
+      <ChakraLink
         p={2}
         bg={active ? "purple.50" : undefined}
         color={active ? "#202023" : inactiveColor}
         target={target}
         {...props}
+
+        href={`${href}`}  scroll={false}
       >
+  
+        
         {children}
-      </Link>
-    </NextLink>
+   
+      </ChakraLink>
+    
   );
 };
 
@@ -155,24 +161,23 @@ const Navbar = (props) => {
                 <NextLink href="/">
                   <MenuItem>Home</MenuItem>
                 </NextLink>
-                <NextLink href="/leaderboard" passHref>
-                  <MenuItem as={Link}>Leaderboard</MenuItem>
+                <NextLink href="/leaderboard" >
+                  <MenuItem>Leaderboard</MenuItem>
                 </NextLink>
-                <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>AboutUs</MenuItem>
+                <NextLink href="/about" >
+                  <MenuItem>AboutUs</MenuItem>
                 </NextLink>
-                <NextLink href="/contact" passHref>
-                  <MenuItem as={Link}>Contact</MenuItem>
+                <NextLink href="/contact" >
+                  <MenuItem>Contact</MenuItem>
                 </NextLink>
                 <MenuItem
-                  as={Link}
                   target="_blank"
                   href="https://github.com/jshub"
                 >
                   View Source
                 </MenuItem>
                 <MenuItem
-                  as={Link}
+       
                   target="_blank"
                   href={"auth/login"}
                   rel="noopener noreferrer"
@@ -180,7 +185,7 @@ const Navbar = (props) => {
                   Sign In
                 </MenuItem>
                 <MenuItem
-                  as={Link}
+      
                   target="_blank"
                   href={"auth/register"}
                   rel="noopener noreferrer"

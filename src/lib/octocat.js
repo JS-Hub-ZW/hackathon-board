@@ -3,8 +3,11 @@
 import { Octokit } from "octokit";
 
 // https://github.com/octokit/core.js#readme
+
+
+
 const octokit = new Octokit({
-    auth: atob('Z2hwX0x4cFJuM3ZJVG1GUFZvUDlyUEVRZG1kTXh6RlBMbTRVdTlZOA=='),
+    auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
 });
 
 const owner = "JS-Hub-ZW";
@@ -22,7 +25,7 @@ export const getContributers = async () => {
         },
       }
     );
-
+    
     return result.data;
   } catch (err) {
     console.log(err);
