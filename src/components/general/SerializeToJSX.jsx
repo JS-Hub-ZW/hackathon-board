@@ -85,7 +85,7 @@ export const SerializeToJSX = (children) => Array.from(children).map((node, i) =
     case 'link':
       return (
         <Link
-          href={escapeHTML(node.url)}
+          href={`${escapeHTML(node.url)}`}
           key={i}
         >
           {SerializeToJSX(node.children)}

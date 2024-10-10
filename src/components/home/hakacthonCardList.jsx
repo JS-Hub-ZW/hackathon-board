@@ -16,6 +16,7 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 
 import { getPublishedTime, processName } from '../../utils/general.utils';
@@ -88,7 +89,7 @@ function HackathonCardList({hackathons}) {
   
           <Box>
            <span> Some gibberish text here to draw attention to the fact that this is a hackathon.</span> <span style={{width:20}}></span>
-            <Link color="teal" href={`/detail/${hackathon.id}`} passHref>Learn More...</Link>
+            <NextLink  href={`/detail/`} >Learn More...</NextLink>
           </Box>
         </Box>
       </Box>

@@ -1,7 +1,6 @@
 import {
   Text,
   Heading,
-  Link,
   Box,
   Center,
   useColorModeValue,
@@ -16,7 +15,7 @@ import { GoMarkGithub } from 'react-icons/go'
 
 const CONTRIBUTE_IMAGE = "https://images.unsplash.com/photo-1483817101829-339b08e8d83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=804&q=80"
 
-function Contribute({ useColorModeValue }) {
+export default function Contribute({ useColorModeValue }) {
   return (<Box role={'group'} p={6} maxW={'500px'} w={'full'} bg={useColorModeValue('white', 'gray.800')} boxShadow={'2xl'} rounded={'lg'} pos={'relative'} zIndex={1}>
     <Box rounded={'lg'} mt={-12} pos={'relative'} height={'230px'} _after={{
       transition: 'all .3s ease',
@@ -50,11 +49,14 @@ function Contribute({ useColorModeValue }) {
         </Text>
 
       </Stack>
-      <Link target="_blank" href='https://github.com/JS-Hub-ZW/hackathon-board' passHref isExternal>
-        <Button colorScheme="green" rightIcon={<GoMarkGithub />}>Hack the Board!</Button>
-      </Link>
+
+        <Button 
+        onClick={() => window.open("https://github.com/JS-Hub-ZW/hackathon-board", "_blank") } 
+        colorScheme="green" rightIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+      </svg>
+      }
+        >Hack the Board!</Button>
     </Stack>
   </Box>);
 }
-
-export default Contribute;
