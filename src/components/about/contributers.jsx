@@ -9,13 +9,14 @@ import {SimpleGrid} from "@chakra-ui/react";
 import {GridItem} from "@chakra-ui/react";
 import { useHackathonContext } from "../../state/provider.state";
 import ContributerCard from "./contributerCard";
+import { useSelector } from "react-redux";
 
 
 function Contributers() {
 
-    const  {state} = useHackathonContext()
+    const contributors = useSelector(state => state.hackathon.contributors)
 
-    console.log("Current state:",state)
+    console.log("Contributors: ", contributors)
 
     return ( 
     
@@ -34,8 +35,8 @@ function Contributers() {
         lg: 4
     }}
         spacing="12">
-        {state.contributors.map(contributer => (
-            <GridItem><ContributerCard contributer={contributer}/></GridItem>
+        {contributors.map(contributor => (
+            <GridItem><ContributerCard contributor={contributor}/></GridItem>
         ))}
 
     </SimpleGrid> </Box>);
