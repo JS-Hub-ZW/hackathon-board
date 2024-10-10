@@ -14,7 +14,7 @@ import {
 
   import {GoMarkGithub} from 'react-icons/go'
   
-  export default function ContributerCard({contributer}) {
+  export default function contributorCard({contributor}) {
     return (
       <Center py={6}>
         <Box
@@ -31,7 +31,7 @@ import {
             <Avatar
               size={'xl'}
               src={
-                contributer.imageURL
+                contributor.avatar_url
               }
               alt={'Author'}
               css={{
@@ -42,12 +42,12 @@ import {
   
             <Stack spacing={0} align={'center'} mb={5}>
               <Heading fontSize={'md'} fontWeight={"bold"}>
-                {contributer.name}
+                {contributor.login}
               </Heading>
-              <Text color={'gray.500'}>{contributer.role}</Text>
+              <Text color={'gray.500'}>Developer</Text>
             </Stack>
 
-            <Link href={contributer.url} passHref isExternal target="_blank">
+            <Link href={contributor.html_url} passHref isExternal target="_blank">
             <Button
             w={'full'}
             
