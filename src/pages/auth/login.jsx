@@ -1,3 +1,5 @@
+"user client";
+
 import React from 'react'
 import LoginCard from '../../src/components/auth/login'
 

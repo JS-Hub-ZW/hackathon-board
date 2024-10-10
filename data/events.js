@@ -1,6 +1,6 @@
-const events = [
+
   
-    {
+const event =    {
       "date": "2023-04-15",
       "time": "10:30",
       "name": "Iron Dome",
@@ -38,8 +38,8 @@ const events = [
         }
       ],
       "images": {
-        "potrait":"https://www.example.com/images/spring-fair-portrait.jpg",
-        "landscape": "https://www.example.com/images/spring-fair-landscape.jpg"
+        "potrait":"https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F315/production/_133592226_irondomeinaction.jpg.webp",
+        "landscape": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F315/production/_133592226_irondomeinaction.jpg.webp"
       },
       "admission": "Free",
       "type": "community_event",
@@ -66,9 +66,41 @@ const events = [
           description: "Some descripiton here"
         }
       ]
-    },
-        
-]
+    }
+    
+
+    const generateEvents = (count) => {
+      let events = [];
+      let actualCount = count /3
+
+      // upcoming events
+      for (let i = 0; i < actualCount; i++) { 
+        let newEvent = {...event};
+        newEvent.status = 1;
+        events.push(newEvent);
+      }
+
+
+        // ongoing events
+      for (let i = 0; i < actualCount; i++) {
+        let newEvent = {...event};
+        newEvent.status = 2;
+        events.push(newEvent);
+      }
+
+
+        // past events
+      for (let i = 0; i < actualCount; i++) {
+        let newEvent = {...event};
+        newEvent.status = 3;
+        events.push(newEvent);
+      }
+      return events;
+    }
+
+
+ let events = generateEvents(60);   
+
     
     
 export default events;

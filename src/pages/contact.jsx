@@ -1,3 +1,5 @@
+"user client";
+
 import {
   Text,
   Heading,

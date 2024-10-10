@@ -1,3 +1,4 @@
+"user client";
 import { Divider, Flex, HStack, SimpleGrid, Wrap } from "@chakra-ui/react";
 import { Stack, Box, Image, Text } from "@chakra-ui/react";
 import HackathonMainDetail from "../../components/hackathonDetails/mainDetails";
