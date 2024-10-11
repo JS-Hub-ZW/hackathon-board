@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cy:open": "cypress open",
     "lint": "next lint"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.11",
     "autoprefixer": "^10.4.7",
+    "cypress": "^13.15.0",
     "eslint": "8.15.0",
     "eslint-config-next": "^14.2.14",
     "postcss": "^8.4.14",
