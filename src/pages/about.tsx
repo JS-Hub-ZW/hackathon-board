@@ -22,6 +22,8 @@ import { Contributor } from "@/types/types";
 
 const About = ({contributors}:{contributors:Contributor[]}) => {
 
+  console.log("Contributors Length: ", contributors.length)
+
    const dispatch = useDispatch()
 
     useEffect(() => {
@@ -60,13 +62,19 @@ export default About;
 
 
 export const getStaticProps = async () => {
-  let contributors = await getContributers()
 
-  console.log("Contributors Length: ", contributors.length)
+
+  let frontContributors = await getContributers("JS-Hub-ZW", "hackathon-board" )
+  let backContributors = await getContributers("JS-Hub-ZW", "hackathon-backend" )
+
+ 
 
   return {
     props: {
-      contributors: contributors
+      contributors: [
+        ...frontContributors,
+        ...backContributors
+      ]
     }
   }
 }
