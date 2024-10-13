@@ -8,6 +8,10 @@ A site where people can post hackathons and register hackathons
 - Chakra UI
 - Octocat
 
+## Design 
+
+You can check the design from [DESIGN.md](./DESIGN.md)
+
 
 ## Installation
 
