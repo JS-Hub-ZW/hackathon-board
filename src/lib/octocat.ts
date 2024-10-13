@@ -10,10 +10,8 @@ const octokit = new Octokit({
     auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
 });
 
-const owner = "JS-Hub-ZW";
-const repo = "hackathon-board";
 
-export const getContributers = async () => {
+export const getContributers = async (owner:string, repo:string) => {
   try {
     let result = await octokit.request(
       `GET /repos/${owner}/${repo}/contributors`,
