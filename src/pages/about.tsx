@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Section from "../components/section";
 import Contributers from "../components/about/contributers";
-import PurposeAndAudience, { Audience, Purpose } from "../components/about/purposeAndAudience";
+import { Audience, Purpose } from "../components/about/purposeAndAudience";
 import { getContributers } from "../lib/octocat";
 import { useDispatch } from "react-redux";
 import { addContributors } from "../state/reducer.state";
