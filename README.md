@@ -7,6 +7,7 @@ A site where people can post hackathons and register hackathons
 - NextJS
 - Chakra UI
 - Octocat
+- Cypress
 
 ## Design 
 
