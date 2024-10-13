@@ -6,6 +6,7 @@ import HackathonSideDetails from "../../components/hackathonDetails/sideDetails"
 import Section from "../../components/section";
 import { requestData } from "../../utils/network.utils";
 import { Hackathon, RequestMethod } from "@/types/types";
+import events from "../../../data/events";
 
 
 
@@ -14,7 +15,8 @@ import { Hackathon, RequestMethod } from "@/types/types";
 export default function Detail({hackathon}:{hackathon:Hackathon}) {
     return (
         <Section delay={0.2}>
-            <HStack>
+            <span></span>
+            {/* <HStack>
                 <Image
                     roundedBottom={"lg"}
                     height={{sm: "sm", "md": "md", "lg": "lg"}}
@@ -30,7 +32,7 @@ export default function Detail({hackathon}:{hackathon:Hackathon}) {
                <HackathonSideDetails  
                     hackathon={hackathon}
                 />
-            </Stack>
+            </Stack> */}
 
         </Section>
     )
@@ -41,14 +43,8 @@ export default function Detail({hackathon}:{hackathon:Hackathon}) {
 
 
 export async function getStaticPaths() {
-    // get total docs 
-    let method = "GET" as RequestMethod
-    const response = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons`, method);
-    const totalDocs = response.totalDocs;
-
-    // Now fetch all hackathons
-    const hackathons = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons?limit=${totalDocs}&depth=2`, method) as {docs: Hackathon[]};
-    const paths = hackathons.docs.map(hackathon => ({params: {id: hackathon.id}}))
+    
+     const paths: never[] = []
     return {
         paths,
         fallback: true,
@@ -56,10 +52,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {id}}:{params:{id:string}}) {
-    console.log("The id is: ", id);
-    let method = "GET" as RequestMethod
-    const hackathon = await requestData(`${process.env.BACKEND_ENDPOINT}/hackathons/${id}`,method)
 
+    const hackathon = events[0]
     return {
         props: {
             hackathon
