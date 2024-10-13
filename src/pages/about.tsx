@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Section from "../components/section";
 import Contributers from "../components/about/contributers";
-import PurposeAndAudience from "../components/about/purposeAndAudience";
+import PurposeAndAudience, { Audience, Purpose } from "../components/about/purposeAndAudience";
 import { getContributers } from "../lib/octocat";
 import { useDispatch } from "react-redux";
 import { addContributors } from "../state/reducer.state";
@@ -47,7 +47,8 @@ const About = ({contributors}:{contributors:Contributor[]}) => {
       
 
        <Box mb={10}>
-           <PurposeAndAudience/>
+           <Purpose/>
+           <Audience/>
         </Box>
 
 
@@ -62,12 +63,8 @@ export default About;
 
 
 export const getStaticProps = async () => {
-
-
   let frontContributors = await getContributers("JS-Hub-ZW", "hackathon-board" )
   let backContributors = await getContributers("JS-Hub-ZW", "hackathon-backend" )
-
- 
 
   return {
     props: {
