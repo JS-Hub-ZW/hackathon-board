@@ -16,7 +16,9 @@ import { RootState } from "@/state/store.state";
 
 function Contributers() {
 
-    const contributors = useSelector((state: RootState) => state.hackathon.hackathons) as Contributor[];
+    const contributors = useSelector((state: RootState) => state.hackathon.contributors) as Contributor[];
+
+    console.log("My contr", contributors)
 
 
 
