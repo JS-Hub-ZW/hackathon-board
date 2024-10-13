@@ -37,7 +37,7 @@ pnpm dev
 
 ## Testing 
 ### Cypress
-We use cypres for End 2 End tests and for components tests.
+We use cypres for [E2E tests](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test) and for [Components tests](https://docs.cypress.io/guides/component-testing/overview).
 
 To run it type the following:
 
