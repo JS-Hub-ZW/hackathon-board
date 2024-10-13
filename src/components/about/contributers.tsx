@@ -18,10 +18,6 @@ function Contributers() {
 
     const contributors = useSelector((state: RootState) => state.hackathon.contributors) as Contributor[];
 
-    console.log("My contr", contributors)
-
-
-
     return ( 
     
     <Box><Heading>Contributors</Heading>
