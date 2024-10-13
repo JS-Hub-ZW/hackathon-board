@@ -11,6 +11,8 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies using pnpm
+RUN pnpm remove cypress
+RUN cat package.json
 RUN pnpm install
 
 # Copy all files to the container
