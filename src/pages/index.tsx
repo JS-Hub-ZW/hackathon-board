@@ -8,10 +8,10 @@ import Section from "../components/section";
 import events from "../../data/events";
 import { useDispatch } from "react-redux";
 import { addHackathons } from "../state/reducer.state";
+import { Hackathon } from "@/types/types";
 
 
-
-export default function Home({hackathons}) {
+export default function Home({ hackathons }:{hackathons: Hackathon[]}) {
 
   const dispatch = useDispatch()
 

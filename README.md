@@ -52,3 +52,21 @@ pnpm cy:open
 
 ## Contribution
 If you find bugs or if you have new features please create an Issue. You can also check the Issue section and ask to be assigned. We respond within a day.
+
+
+## Containerization
+You should be able to run hackathon board in a Docker container
+
+**Build the image:**
+
+```sh
+sudo sh build.sh
+```
+
+**Run the image:**
+
+Modify `run.sh` and run it:
+
+```sh
+sudo sh run.sh
+```

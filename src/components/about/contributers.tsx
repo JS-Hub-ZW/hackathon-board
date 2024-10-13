@@ -35,8 +35,8 @@ function Contributers() {
         lg: 4
     }}
         spacing="12">
-        {contributors.map(contributor => (
-            <GridItem><ContributorCard contributor={contributor}/></GridItem>
+        {contributors.map((contributor, index) => (
+            <GridItem key={index}><ContributorCard contributor={contributor}/></GridItem>
         ))}
 
     </SimpleGrid> </Box>);
