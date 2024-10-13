@@ -6,7 +6,7 @@ import {
     Text,
 } from "@chakra-ui/react";
 
-function PurposeAndAudience() {
+export function Purpose() {
     return (  <Box>
         <Box mb={10}>
         <Heading>Purpose</Heading>
@@ -18,14 +18,16 @@ function PurposeAndAudience() {
         
 
        </Box>
-       <Box mb={10}>
-        <Heading>Target Audience</Heading>
-        <Text  mt={3}>
-          Hackthon Board displays hackathons in Zimbabwe and mainly targets Zimbabwe hackers so they showcase their skills. However we may
-          display hackathons in other countries and target other countries hackers. 
-        </Text>
-    </Box>
+      
     </Box>);
 }
 
-export default PurposeAndAudience;
+export function Audience() {
+  return ( <Box mb={10}>
+    <Heading>Target Audience</Heading>
+    <Text  mt={3}>
+      Hackthon Board displays hackathons in Zimbabwe and mainly targets Zimbabwe hackers so they showcase their skills. However we may
+      display hackathons in other countries and target other countries hackers. 
+    </Text>
+</Box>)
+}
