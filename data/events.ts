@@ -1,6 +1,8 @@
+import { generateUUID } from "@/utils/general.utils";
 
   
 const event =    {
+      "id": "",
       "date": "2023-04-15",
       "time": "10:30",
       "name": "Iron Dome",
@@ -76,6 +78,7 @@ const event =    {
       // upcoming events
       for (let i = 0; i < actualCount; i++) { 
         let newEvent = {...event};
+        newEvent.id = generateUUID()
         newEvent.status = 1;
         events.push(newEvent);
       }
@@ -84,6 +87,7 @@ const event =    {
         // ongoing events
       for (let i = 0; i < actualCount; i++) {
         let newEvent = {...event};
+        newEvent.id = generateUUID()
         newEvent.status = 2;
         events.push(newEvent);
       }
@@ -92,6 +96,7 @@ const event =    {
         // past events
       for (let i = 0; i < actualCount; i++) {
         let newEvent = {...event};
+        newEvent.id = generateUUID()
         newEvent.status = 3;
         events.push(newEvent);
       }
