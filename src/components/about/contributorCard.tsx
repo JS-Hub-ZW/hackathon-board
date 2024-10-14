@@ -50,7 +50,7 @@ import React from 'react';
 
             <Button
             w={'full'}
-            onClick={() => window.open(contributor.html_url, '_blank')}
+            onClick={() => window.location.href = contributor.html_url}
             colorScheme="green"
             color={'white'}
             rounded={'md'}
