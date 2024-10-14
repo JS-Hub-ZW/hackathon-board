@@ -31,7 +31,7 @@ export default function Contribute({ useColorModeValue }:{useColorModeValue: any
         filter: 'blur(20px)'
       }
     }}>
-      <Image rounded={'lg'} height={230} width={"full"} objectFit={'cover'} src={CONTRIBUTE_IMAGE} />
+      <Image rounded={'lg'} height={230} width={"full"} alt={"Contribute"} objectFit={'cover'} src={CONTRIBUTE_IMAGE} />
     </Box>
     <Stack pt={10} align={'center'}>
       <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>

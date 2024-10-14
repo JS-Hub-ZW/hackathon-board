@@ -38,7 +38,7 @@ function SayHello({ useColorModeValue }:{useColorModeValue: any}) {
                 filter: 'blur(20px)'
             }
         }}>
-            <Image rounded={'lg'} height={230} width={445} objectFit={'cover'} src={HELLO_IMAGE} />
+            <Image rounded={'lg'} alt={"Say Hello"} height={230} width={445} objectFit={'cover'} src={HELLO_IMAGE} />
         </Box>
         <Stack pt={10} align={'center'}>
             <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
