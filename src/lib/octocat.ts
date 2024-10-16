@@ -2,24 +2,22 @@
 
 import { Octokit } from "octokit";
 
-// https://github.com/octokit/core.js#readme
-
-
+const GITHUB_API_VERSION = "2022-11-28";
 
 const octokit = new Octokit({
     auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
 });
 
 
-export const getContributers = async (owner:string, repo:string) => {
+export const getContributers = async (owner: string, repo: string) => {
   try {
-    let result = await octokit.request(
+    const result = await octokit.request(
       `GET /repos/${owner}/${repo}/contributors`,
       {
         owner: owner,
         repo: repo,
         headers: {
-          "X-GitHub-Api-Version": "2022-11-28",
+          "X-GitHub-Api-Version": GITHUB_API_VERSION,
         },
       }
     );
