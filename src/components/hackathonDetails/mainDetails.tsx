@@ -1,6 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 import { Stack, Box, Image, Text } from "@chakra-ui/react";
-import DescriptionItem from "./descriptionItem";
+import {DescriptionItem, ListItems} from "./descriptionItem";
 import { Hackathon } from "@/types/types";
 
 export default function HackathonMainDetail({ hackathon }:{hackathon:Hackathon}) {
@@ -15,21 +15,14 @@ export default function HackathonMainDetail({ hackathon }:{hackathon:Hackathon})
       <Heading>{hackathon.name}</Heading>
 
       <Box mt={10}>
-        <DescriptionItem heading="Description" isRichText={true}>
-          {hackathon.description}
+      
+        <DescriptionItem heading="Description" text={hackathon.description} isRichText={false}>
+          
+          
         </DescriptionItem>
-        <DescriptionItem heading="Requirements" isRichText={true}>
-          {hackathon.requirements}
-        </DescriptionItem>
-        <DescriptionItem heading="Rules" isRichText={true}>
-          {hackathon.rules}
-        </DescriptionItem>
-        <DescriptionItem heading="Selection Criteria" isRichText={true}>
-          {hackathon.selection_criteria}
-        </DescriptionItem>
-        <DescriptionItem heading="Prizes" isRichText={true}>
-          {hackathon.prizes}
-        </DescriptionItem>
+        <ListItems heading="Prizes" items={hackathon.prizes.map(prize => prize.name + " - $" +prize.amount)} isRichText={true}>
+          
+        </ListItems>
       </Box>
     </Box>
   );
