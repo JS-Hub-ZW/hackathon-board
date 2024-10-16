@@ -1,6 +1,5 @@
 import { generateUUID } from "@/utils/general.utils";
 
-
 const event = {
   "id": "",
   "date": "2023-04-15",
@@ -40,7 +39,7 @@ const event = {
     }
   ],
   "images": {
-    "potrait": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F315/production/_133592226_irondomeinaction.jpg.webp",
+    "portrait": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F315/production/_133592226_irondomeinaction.jpg.webp",
     "landscape": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F315/production/_133592226_irondomeinaction.jpg.webp"
   },
   "admission": "Free",
@@ -53,68 +52,60 @@ const event = {
       id: 1,
       amount: 300,
       name: "1st Prize",
-      description: "Some descripiton here"
+      description: "Some description here"
     },
     {
       id: 2,
       amount: 200,
       name: "2nd Prize",
-      description: "Some descripiton here"
+      description: "Some description here"
     },
     {
       id: 3,
       amount: 100,
-      name: "2rd Prize",
-      description: "Some descripiton here"
+      name: "3rd Prize",
+      description: "Some description here"
     }
   ]
-}
-
+};
 
 const generateEvents = (count: number) => {
   let events = [];
-  let actualCount = count / 3
+  let actualCount = count / 3;
 
   // upcoming events
   for (let i = 0; i < actualCount; i++) {
     let newEvent = { ...event };
-    newEvent.id = generateUUID()
+    newEvent.id = generateUUID();
     newEvent.status = 1;
     events.push(newEvent);
   }
 
-
   // ongoing events
   for (let i = 0; i < actualCount; i++) {
     let newEvent = { ...event };
-    newEvent.id = generateUUID()
+    newEvent.id = generateUUID();
     newEvent.status = 2;
     events.push(newEvent);
   }
 
-
   // past events
   for (let i = 0; i < actualCount; i++) {
     let newEvent = { ...event };
-    newEvent.id = generateUUID()
+    newEvent.id = generateUUID();
     newEvent.status = 3;
     events.push(newEvent);
   }
+
   return events;
-}
+};
 
 
 const getEvents = (count:number) => {
-
-
-
   let genEvents = generateEvents(count)
-
   return genEvents
 }
-
+// Fetch events
 let events = getEvents(60);
-
-
 
 export default events;
