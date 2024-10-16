@@ -16,7 +16,7 @@ export default function Detail({hackathon}:{hackathon:Hackathon}) {
     return (
         <Section delay={0.2}>
             <span>{hackathon.name}</span>
-            {/* <HStack>
+            <HStack>
                 <Image
                     roundedBottom={"lg"}
                     height={{sm: "sm", "md": "md", "lg": "lg"}}
@@ -32,7 +32,7 @@ export default function Detail({hackathon}:{hackathon:Hackathon}) {
                <HackathonSideDetails  
                     hackathon={hackathon}
                 />
-            </Stack> */}
+            </Stack>
 
         </Section>
     )
