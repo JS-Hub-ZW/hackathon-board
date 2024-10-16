@@ -29,16 +29,12 @@ export default function HackathonSideDetails({ hackathon }:{hackathon:Hackathon}
             icon={<GlobeIcon boxSize={6} />}
             text={hackathon.type ? titleCase(hackathon.type) : ""}
           />
-          <DetailItem
-            icon={<EyeIcon boxSize={6} />}
-            text={hackathon.setting ? titleCase(hackathon.setting) : "Public"}
-          />
         </HStack>
         <HStack spacing={"12"} mt="3">
           <DetailItem icon={<CashIcon boxSize={6} />} text={String(hackathon.total_prizes)} />
           <DetailItem
             icon={<UsersIcon boxSize={6} />}
-            text={hackathon.participants}
+            text={hackathon.participants ? hackathon.participants : "0"}
           />
         </HStack>
       </Box>
