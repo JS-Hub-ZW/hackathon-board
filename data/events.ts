@@ -106,17 +106,10 @@ const generateEvents = (count: number) => {
 
 const getEvents = (count:number) => {
 
-  if (window && window.localStorage){
-    let events = window.localStorage.getItem('events')
-
-    if (events){
-      return JSON.parse(events)
-    }
-  }
 
 
   let genEvents = generateEvents(count)
-  window && window.localStorage ? window.localStorage.setItem("events", JSON.stringify(genEvents)) : null
+
   return genEvents
 }
 
