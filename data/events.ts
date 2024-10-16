@@ -100,23 +100,11 @@ const generateEvents = (count: number) => {
   return events;
 };
 
-const getEvents = (count: number) => {
-  // Check if we're in a browser environment
-  if (typeof window === "undefined") {
-    return [];
-  }
 
-  let events = localStorage.getItem('events');
-
-  if (events) {
-    return JSON.parse(events);
-  }
-
-  let genEvents = generateEvents(count);
-  localStorage.setItem("events", JSON.stringify(genEvents));
-  return genEvents;
-};
-
+const getEvents = (count:number) => {
+  let genEvents = generateEvents(count)
+  return genEvents
+}
 // Fetch events
 let events = getEvents(60);
 
