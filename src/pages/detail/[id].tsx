@@ -15,7 +15,6 @@ import events from "../../../data/events";
 export default function Detail({hackathon}:{hackathon:Hackathon}) {
     return (
         <Section delay={0.2}>
-            <span>{hackathon.name}</span>
             <HStack>
                 <Image
                     roundedBottom={"lg"}
